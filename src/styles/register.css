@@ -1,0 +1,305 @@
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../assets/login-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: var(--ff-main);
+}
+
+/* !Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .375rem;
+    padding-bottom: .4rem;
+    padding-inline: 1rem;
+
+    background-color: var(--white);
+}
+
+header h1 {
+    font-weight: var(--fw-bold);
+}
+
+/* ? Hamburguer Menu */
+.hamburguer {
+    position: relative;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.hamburguer .bar,
+.hamburguer:after,
+.hamburguer:before {
+    width: 100%;
+    height: 5px;
+    content: '';
+    display: block;
+    background-color: var(--black);
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburguer.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburguer.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburguer.is-active .bar {
+    opacity: 0;
+}
+
+/* ? Mobile Nav */
+
+.mobile__nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+    margin-top: 46px;
+    padding-top: 10px;
+    transition: 0.4s;
+}
+
+.mobile__nav.is-active {
+    left: 0;
+    background-color: white;
+}
+
+.mobile__nav a {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    max-width: 100px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+
+
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+}
+
+.mobile__nav .login__btn {
+    color: var(--white);
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.mobile__nav .login__btn:hover {
+    background-color: var(--lightpurple);
+    color: white;
+    border: 1px solid var(--lightpurple);
+}
+
+.mobile__nav .register__btn {
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+    color: var(--purple);
+}
+
+.mobile__nav .register__btn:hover {
+    background-color: var(--lightpurple);
+    color: white;
+    border: 1px solid var(--lightpurple);
+}
+
+/* !Main register wrapper */
+main {
+    padding-top: 80px;
+}
+
+.register__wrapper {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 100%;
+}
+
+.register__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.register__container h2 {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    padding-top: 40px;
+}
+
+.register__container form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 100%;
+    padding-top: 26px;
+}
+
+.register__container form input {
+    width: 90%;
+    height: 52px;
+    box-sizing: border-box;
+
+    padding-left: 10px;
+
+    background-color: white;
+    border: 1px solid rgba(87, 86, 86, 0.5);
+}
+
+.register__container form select {
+    width: 90%;
+    height: 52px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid rgba(87, 86, 86, 0.5);
+    font-family: var(--ff-main);
+}
+
+.register__container form select:focus {
+    outline: 1px solid var(--lightpurple);
+}
+
+.register__container form button {
+    width: 90%;
+    box-sizing: border-box;
+    height: 48px;
+    margin-bottom: 22px;
+
+    background-color: var(--purple);
+    color: var(--white);
+
+    border: 1px solid var(--purple);
+    font-family: var(--ff-main);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s, border 0.5s;
+}
+
+.register__container form button:hover {
+    background-color: var(--lightpurple);
+    border: 1px solid var(--lightpurple)
+}
+
+.register__container a {
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+
+    font-size: 1rem;
+
+    width: 90%;
+    padding-block: 15px;
+    margin-bottom: 38px;
+
+    border: 1px solid var(--purple);
+    font-weight: var(--fw-bold);
+    color: var(--purple);
+
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.desktop__nav {
+    display: none;
+}
+
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .register__wrapper {
+        width: 650px;
+    }
+
+    .register__container form {
+        align-items: center;
+    }
+
+    .register__container, 
+    form,
+    input,
+    select,
+    a {
+        align-items: center;
+        width: 70%;
+    }
+
+    .mobile__nav,
+    .hamburguer {
+        display: none;
+    }
+
+    header {
+        height: fit-content;
+        justify-content: space-around;
+    }
+
+    .desktop__nav {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+
+    .desktop__nav .login__btn {
+        color: var(--purple);
+        background-color: var(--white);
+        border: 1px solid var(--purple);
+        cursor: pointer;
+        padding-block: 15px;
+        padding-inline: 50px;
+
+
+        transition: background-color 0.5s, color 0.5s, border 0.5s;
+    }
+    
+    .desktop__nav .login__btn:hover {
+        background-color: var(--lightpurple);
+        color: white;
+        border: 1px solid var(--lightpurple);
+    }
+
+    .desktop__nav .register__btn {
+        color: var(--white);
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+        cursor: pointer;
+        padding-block: 15px;
+        padding-inline: 50px;
+    }
+    
+    .desktop__nav .register__btn:hover {
+        background-color: var(--lightpurple);
+        color: white;
+        border: 1px solid var(--lightpurple);
+    }
+}

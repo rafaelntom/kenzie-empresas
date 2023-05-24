@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas - Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Kenzie Empresas</h1>
+
+        <nav class="desktop__nav">
+            <a href="../../index.html" class="login__btn">Home</a>
+            <a href="../pages/register.html" class="register__btn">Cadastro</a>
+        </nav>
+
+
+        <nav class="mobile__nav">
+            <a href="../../index.html" class="login__btn">Home</a>
+            <a href="../pages/register.html" class="register__btn">Cadastro</a>
+        </nav>
+
+        <button class="hamburguer">
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    <main>
+        <section class="login__wrapper">
+            <div class="login__container">
+                <h2>Login</h2>
+                <p>Preencha os campos para realizar login</p>
+
+                <form>
+                    <input class="login__input" type="email" name="email" id="userLoginEmail" placeholder="Seu e-mail">
+                    <input class="login__input" type="password" name="password" id="userLoginPassword" placeholder="Sua senha">
+                    <button class="userLogin__button">Login</button>
+                </form>
+
+                <span>ou</span>
+
+                <a href="../pages/register.html">Cadastre-se</a>
+            </div>
+
+            <div class="toast__container hidden">
+                <p>E-mail ou senha invalidos</p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="../scripts/indexLogin.js" type="module"></script>
+</body>
+
+</html>

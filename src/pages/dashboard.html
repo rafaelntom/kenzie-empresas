@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas - Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <dialog id="modal__controller">
+        <!-- <div class="modal__container">
+            <h4>Editar Perfil</h4>
+            <img src="../assets/x-close-modal.png" alt="X">
+            <form>
+                <input type="text" class="update__input" name="username" placeholder="Seu nome">
+                <input type="email" class="update__input" name="email" placeholder="Seu e-mail">
+                <input type="password" class="update__input" name="password" placeholder="Sua senha">
+                <button class="updateProfile__btn">Editar Perfil</button>
+            </form>
+        </div> -->
+    </dialog>
+
+    <header>
+        <h1>Kenzie Empresas</h1>
+
+        <nav class="desktop__nav">
+            <button class="dashboard__logout">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="user__container">
+            <!-- <h4 class="username">Username</h4>
+            <div class="userInfo__container">
+                <span>E-mail: <span class="userEmail">teste@mail.com</span></span>
+                <span class="professional__level">Pleno</span>
+                <span class="job__type">Home Office</span>
+            </div> -->
+            <!-- <img src="../assets/pencil-icon-purple.png" alt=""> -->
+        </div>
+
+        <div class="companies__container">
+            <div class="companies__header">
+                <h4>Company Name - Department Name</h4>
+            </div>
+            <ul class="user__card ">
+                <!-- <li>
+                    <h5>Nome do colega</h5>
+                    <span>Prof Level</span>
+                </li>
+                <li>
+                    <h5>Nome do colega</h5>
+                    <span>Prof Level</span>
+                </li>
+                <li>
+                    <h5>Nome do colega</h5>
+                    <span>Prof Level</span>
+                </li> -->
+            </ul>
+            <span class="not__hired hidden">Você ainda não foi contratado!</span>
+        </div>
+
+        <div class="toast__container hidden">
+            <p>E-mail ou senha invalidos</p>
+        </div>
+    </main>
+
+    <script src="../scripts/indexDashboard.js" type="module"></script>
+</body>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas - Register</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Kenzie Empresas</h1>
+
+        <nav class="desktop__nav">
+            <a href="../../index.html" class="login__btn">Home</a>
+            <a href="../pages/login.html" class="register__btn">Login</a>
+        </nav>
+
+        <nav class="mobile__nav">
+            <a href="../../index.html" class="register__btn">Home</a>
+            <a href="../pages/login.html" class="login__btn">Login</a>
+        </nav>
+
+        <button class="hamburguer">
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    
+    <main>
+        <section class="register__wrapper">
+            <div class="register__container">
+             <h2>Cadastre-se</h2>
+
+             <form>
+                <input type="text" class="register__input" name="username" placeholder="Seu nome">
+                <input type="email" class="register__input" name="email" placeholder="Seu e-mail">
+                <input type="password" class="register__input" name="password" placeholder="Sua senha">
+
+                <select name="professional_level" id="" class="register__input">
+                    <option value="">Nível Profissional</option>
+                    <option value="estágio">Estágio</option>
+                    <option value="júnior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="sênior">Sênior</option>
+                </select>
+
+                <button class="register__user">Cadastre-se</button>
+             </form>
+             <a href="../../index.html">Retornar</a>
+        </section>
+
+        <div class="toast__container hidden">
+            <p>E-mail ou senha invalidos</p>
+        </div>
+    </main>
+
+    <script src="../scripts/indexRegister.js" type="module"></script>
+</body>

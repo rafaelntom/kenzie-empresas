@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas - Home Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/toast.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Kenzie Empresas</h1>
+
+        <nav class="desktop__nav">
+            <a href="./src/pages/login.html" class="login__btn">Login</a>
+            <a href="./src/pages/register.html" class="register__btn">Cadastro</a>
+        </nav>
+
+        <nav class="mobile__nav">
+            <a href="./src/pages/login.html" class="login__btn">Login</a>
+            <a href="./src/pages/register.html" class="register__btn">Cadastro</a>
+        </nav>
+
+        <button class="hamburguer">
+            <div class="bar"></div>
+        </button>
+    </header>
+    
+    <main>
+
+
+        
+        <div class="sector__types">
+            <select name="sector" id="sectorType">
+                <option selected disabled>Selecionar setor</option>
+                <option value="">Todos os setores</option>
+            </select>
+        </div>
+
+        <section class="companies__container">
+
+            <ul class="companies__card">
+                <!-- <li>
+                    <h3>Empresa Name</h3>
+                    <span class="open__time">10 horas</span>
+                    <span class="sector">Setor</span>
+                </li> -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="./src/scripts/index.js" type="module"></script>
+</body>

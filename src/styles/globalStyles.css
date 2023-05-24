@@ -1,0 +1,24 @@
+:root {
+    --purple: #4200FF;
+    --lightpurple: #6a34fd;
+    --white: #FFFFFF;
+    --black: #000000;
+    --red: #CE4646;
+    --green: #4BA036;
+
+    --ff-main: 'Inter', sans-serif; 
+
+    --fw-bold: bold;
+}
+
+input {
+    font-family: var(--ff-main);
+}
+
+input:focus {
+    outline: 1px solid var(--lightpurple);
+}
+
+input:placeholder-shown {
+    color: lightgray;
+}

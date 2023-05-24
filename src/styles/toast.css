@@ -1,0 +1,56 @@
+.toast__container {
+    color: var(--white); 
+    
+    font-family: var(--ff-main) ;
+
+    max-width: 200px;
+    padding-block: 20px;
+    padding-inline: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+
+    animation: fadeIn 1.2s linear ;
+}
+
+.hidden {
+    display: none;
+}
+
+.toast__fadeOut {
+    animation: fadeOut 1.2s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(120%);
+        opacity: 0%;
+        display: block;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(120%);
+        opacity: 0%;
+    }
+}

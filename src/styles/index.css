@@ -1,0 +1,350 @@
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../assets/login-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: var(--ff-main);
+}
+
+/* !Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .375rem;
+    padding-bottom: .4rem;
+    padding-inline: 1rem;
+
+    background-color: var(--white);
+}
+
+header h1 {
+    font-weight: var(--fw-bold);
+}
+
+
+/* ? Hamburguer Menu */
+.hamburguer {
+    position: relative;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.hamburguer .bar,
+.hamburguer:after,
+.hamburguer:before {
+    width: 100%;
+    height: 5px;
+    content: '';
+    display: block;
+    background-color: var(--black);
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburguer.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburguer.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburguer.is-active .bar {
+    opacity: 0;
+}
+
+/* ? Mobile Nav */
+
+.mobile__nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+    margin-top: 46px;
+    padding-top: 10px;
+    transition: 0.4s;
+}
+
+.mobile__nav.is-active {
+    left: 0;
+    background-color: white;
+}
+
+.mobile__nav a {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    max-width: 100px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+
+
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+}
+
+.mobile__nav .login__btn {
+    color: var(--purple);
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.mobile__nav .login__btn:hover {
+    background-color: var(--lightpurple);
+    color: white;
+    border: 1px solid var(--lightpurple);
+}
+
+.mobile__nav .register__btn {
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+}
+
+.mobile__nav .register__btn:hover {
+    background-color: var(--lightpurple);
+    color: white;
+    border: 1px solid var(--lightpurple);
+}
+
+/* !Main content */
+
+main {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ? Companies Header */
+.companies__header {
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    width: 80%;
+    margin: 0 auto
+}
+
+.companies__header h3 {
+    color: var(--white);
+    font-size: 1.125rem;
+    padding-block: 25px;
+}
+
+/* ? Companies Type of Sector */
+
+.sector__types {
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+    
+    padding-block: 25px;
+}
+
+.sector__types select {
+    font-family: var(--ff-main);
+    font-size: 1.125rem;
+
+    border: none;
+    padding: 15px 15px 15px 15px;
+    color: white;
+    background-color: var(--purple);
+}
+
+.sector__types select:focus {
+    border: 1px solid var(--purple);
+    outline: none;
+}
+
+/* ? Companies container */
+
+.companies__container {
+    background-color: #dfdddd;
+    width: 80%;
+    height: 332px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.companies__container::-webkit-scrollbar {
+    background-color: #a180fc;
+}
+
+.companies__container::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 5vw;
+    width: 50px;
+}
+
+.companies__container .companies__card {
+    gap: 16px;
+    display: flex;
+    gap: 19px;
+
+    border-radius: 4px;
+    padding-top: 25px;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
+
+.companies__container .companies__card li {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: .9375rem;
+
+    min-height: 200px;
+    width: 245px;
+    background-color: var(--white);
+    border-radius: 5px 5px 0px 0px;
+
+    border-bottom: 1px solid var(--lightpurple);
+
+}
+
+.companies__container .companies__card li h3 {
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+    padding-bottom: 90px;
+}
+
+.companies__container .companies__card .sector {
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    width: fit-content;
+
+    padding: .625rem 1.01rem;
+    border-radius: 255px;
+
+}
+
+.desktop__nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .register__wrapper {
+        width: 650px;
+    }
+
+    .register__container form {
+        align-items: center;
+    }
+
+    .register__container, 
+    form,
+    input,
+    select,
+    a {
+        align-items: center;
+        width: 70%;
+    }
+
+    .mobile__nav,
+    .hamburguer {
+        display: none;
+    }
+
+    header {
+        height: fit-content;
+        justify-content: space-around;
+    }
+
+    .desktop__nav {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+
+    .desktop__nav .login__btn {
+        color: var(--purple);
+        background-color: var(--white);
+        border: 1px solid var(--purple);
+        cursor: pointer;
+        padding-block: 15px;
+        padding-inline: 50px;
+
+
+        transition: background-color 0.5s, color 0.5s, border 0.5s;
+    }
+    
+    .desktop__nav .login__btn:hover {
+        background-color: var(--lightpurple);
+        color: white;
+        border: 1px solid var(--lightpurple);
+    }
+
+    .desktop__nav .register__btn {
+        color: var(--white);
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+        cursor: pointer;
+        padding-block: 15px;
+        padding-inline: 50px;
+    }
+    
+    .desktop__nav .register__btn:hover {
+        background-color: var(--lightpurple);
+        color: white;
+        border: 1px solid var(--lightpurple);
+    }
+
+    .sector__types {
+        max-width: 650px;
+    }
+
+    .companies__container {
+        overflow-x: hidden;
+        height: 50vh;
+        max-width: 650px;
+    }
+
+    .companies__container .companies__card {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: inherit;
+        padding-block: 20px;
+    }
+
+    .companies__container .companies__card li {
+        width: 80%;
+    }
+}

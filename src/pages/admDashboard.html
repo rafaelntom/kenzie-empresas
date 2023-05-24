@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas - Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/admDashboard.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <dialog id="deleteModal__controller">
+        <div class="deleteModal__container">
+
+        </div>
+    </dialog>
+
+    <dialog id="editUserModal__controller" class=''>
+    </dialog>
+
+    <dialog id="createDeptModal__controller">
+    </dialog>
+
+    <dialog id="allDeptInfoModal__controller">
+        <!-- <div class="allDeptInfo__container">
+            <img src="../assets/x-close-modal.png" alt="">
+            <h4>Nome do departamento</h4>
+            <div class="header__container">
+                <div class="left__container">
+                    <h4>Descrição departamento</h4>
+                    <span>Empresa pertencente</span>
+                </div>
+                <div class="right__container">
+                    <select name="" id="outOfWorkUsers">
+                        <option value="">Selecionar Usuário</option>
+                    </select>
+                    <button class="confirm__hireUser">Contratar</button>
+                </div>
+            </div>
+            <ul class="hired__users">
+                <li class="user__card">
+                    <h4>Username</h4>
+                    <span>User PROF LEVEL</span>
+                    <span>Company Name</span>
+                    <button class="fire__user">Desligar</button>
+                </li>
+            </ul>
+        </div> -->
+    </dialog>
+
+    <dialog id="editDeptModal__controller">
+
+    </dialog>
+
+    <dialog id="deleteDeptModal__controller">
+
+    </dialog>
+
+    <header>
+        <h1>Kenzie Empresas</h1>
+
+        <nav class="desktop__nav">
+            <button class="admDashboard__logout">Logout</button>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="dept__container">
+            <div class="dept__header">
+                <h4>Departamentos</h4>
+                <select name="dept" id="dept">
+                    <option value="">Todas Empresas</option>
+                </select>
+                <button class="add__dept">Criar <span>+</span></button>
+            </div>
+
+            <ul class="dept__card-wrapper">
+                <li>
+                    <div class="dept__card-header">
+                        <h4>Departament name</h4>
+                        <span class="dept__description">Departament description</span>
+                        <span class="company__name">Company name</span>
+                    </div>
+                    <div class="dept__card-icons">
+                        <img src="../assets/eye-icon.png" alt="">
+                        <img src="../assets/pencil-icon-black.png" alt="">
+                        <img src="../assets/trash-icon-black.png" alt="">
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+
+        <section class="users__container">
+            <h4>Usuarios Cadastrados</h4>
+            <ul class="users__UL">
+
+            </ul>
+        </section>
+    </main>
+
+    <script src="../scripts/indexAdmDashboard.js" type="module"></script>
+</body>

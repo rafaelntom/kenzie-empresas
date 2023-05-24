@@ -1,0 +1,563 @@
+/* ? Modal that edit the user info (user page) */
+#modal__controller {
+    border: none;
+    height: fit-content;
+    width: 60%;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: var(--ff-main);
+}
+
+#modal__controller::backdrop {
+    background-color: #6a34fd2d;
+}
+
+.modal__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.modal__container h4 {
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    padding-bottom: 20px;
+}
+
+.modal__container>img {
+    position: absolute;
+    right: 5px;
+    top: -10px;
+
+    background-color: white;
+    color: var(--black);
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+    font-family: var(--ff-main);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.modal__container>img:hover {
+    transform: scale(1.1);
+}
+
+.modal__container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal__container form input {
+    height: 52px;
+    box-sizing: border-box;
+
+    padding-left: 10px;
+
+    background-color: white;
+    border: 1px solid rgba(87, 86, 86, 0.5);
+}
+
+.modal__container form>button {
+    box-sizing: border-box;
+    height: 48px;
+
+    background-color: var(--purple);
+    color: var(--white);
+
+    border: 1px solid var(--purple);
+    font-family: var(--ff-main);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s, border 0.5s;
+}
+
+.modal__container form>button:hover {
+    background-color: var(--lightpurple);
+    border: 1px solid var(--lightpurple);
+}
+
+/* !Modal to create new departament (adm page) */
+/* ? Create dept DIALOG */
+#createDeptModal__controller {
+    border: none;
+    height: max-content;
+    width: 30%;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.createDept__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+.createDept__container img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+}
+
+.createDept__container img:hover {
+    transform: scale(1.1);
+}
+
+.createDept__container h4 {
+    font-size: 1.875rem;
+    font-weight: var(--fw-bold);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    align-self: flex-start;
+}
+
+.createDept__container input {
+    height: 52px;
+    box-sizing: border-box;
+    width: 100%;
+
+    padding-left: 10px;
+    font-size: 1.125rem;
+
+    background-color: white;
+    border: 1px solid rgba(87, 86, 86, 0.5);
+}
+
+.createDept__container select {
+    font-family: var(--ff-main);
+    font-size: 1.125rem;
+    width: 100%;
+
+    box-sizing: border-box;
+    color: black;
+    padding: 13px;
+    border: 1px solid rgba(87, 86, 86, 0.5);
+}
+
+.createDept__container button {
+    background-color: var(--purple);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    height: 48px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ! Modal to delete user - (adm page) */
+/* ? Delte User DIALOG */
+#deleteModal__controller {
+    border: none;
+    height: max-content;
+    width: max-content;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.deleteModal__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.deleteModal__container img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+}
+
+.deleteModal__container img:hover {
+    transform: scale(1.1);
+}
+
+.deleteModal__container p {
+    font-size: 1.75rem;
+    font-weight: var(--fw-bold);
+    padding-block: 34px;
+}
+
+.deleteModal__container button {
+    background-color: var(--green);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    width: 70%;
+    height: 48px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.deleteModal__container button:hover {
+    background-color: #20700c;
+}
+
+/* ? Edit user DIALOG */
+#editUserModal__controller {
+    border: none;
+    height: max-content;
+    width: 60%;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.editUser__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    gap: 13px;
+}
+
+.editUser__container>img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+}
+
+.editUser__container img:hover {
+    transform: scale(1.1);
+}
+
+.editUser__container h4 {
+    font-size: 1.75rem;
+    font-weight: var(--fw-bold);
+    padding-block: 34px;
+    align-self: flex-start;
+}
+
+.editUser__container select {
+    font-family: var(--ff-main);
+    font-size: 1.125rem;
+    width: 100%;
+
+    box-sizing: border-box;
+    color: lightslategrey;
+    padding: 15px;
+}
+
+.editUser__container select:focus {
+    color: black;
+}
+
+.editUser__container button {
+    background-color: var(--purple);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    width: 70%;
+    height: 48px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ! EYE ICON - See ALL the department INFO */
+/* ? Main modal (admin page) */
+#allDeptInfoModal__controller {
+    border: none;
+    min-height: max-content;
+    height: max-content;
+    width: 60%;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: 'Inter', sans-serif
+}
+
+.allDeptInfo__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    gap: 13px;
+}
+
+.allDeptInfo__container>h4 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.allDeptInfo__container>img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+}
+
+.allDeptInfo__container img:hover {
+    transform: scale(1.1);
+}
+
+.allDeptInfo__container .header__container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allDeptInfo__container .header__container .left__container,
+.right__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.allDeptInfo__container .header__container .right__container select {
+    border: 1px solid lightgray;
+    padding-block: 8px;
+    font-family: var(--ff-main);
+}
+
+.allDeptInfo__container .header__container .right__container > button {
+    background-color: var(--green);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    align-self: flex-end;
+    padding-block: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: .95rem;
+    font-family: var(--ff-main);
+    transition: background-color 0.4s;
+}
+
+.allDeptInfo__container .header__container .right__container > button:hover{
+    background-color: #2a7917;
+}
+
+.allDeptInfo__container .header__container .left__container h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.allDeptInfo__container .header__container .left__container span {
+    font-size: 1.125rem;
+}
+
+.allDeptInfo__container .hired__users {
+    background-color: #f3f3f3;
+    padding-block: .9375rem;
+    padding-inline: .625rem;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.allDeptInfo__container .hired__users::-webkit-scrollbar {
+    background-color: #a180fc;
+    height: 8px;
+}
+
+.allDeptInfo__container .hired__users::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 5vw;
+}
+
+.allDeptInfo__container .hired__users .user__card {
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    min-width: max-content;
+    width: 30%;
+    padding: .625rem;
+    border-radius: 4px;
+    height: fit-content;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--lightpurple);
+}
+
+.allDeptInfo__container .hired__users .user__card h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.allDeptInfo__container .hired__users .user__card button {
+    background-color: white;
+    border: 1px solid var(--red);
+    width: 70%;
+    align-self: center;
+    color: var(--red);
+    font-size: .875rem;
+    font-weight: bold;
+    padding-block: 10px;
+    box-sizing: border-box;
+
+    margin-top: 10px;
+    font-family: var(--ff-main);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.allDeptInfo__container .hired__users .user__card button:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+/* !EDIT Department info (pencil) */
+#editDeptModal__controller {
+    border: none;
+    min-height: max-content;
+    height: max-content;
+    width: 40%;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: 'Inter', sans-serif
+}
+
+.editDept__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    gap: 13px;
+}
+
+.editDept__container > img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+}
+
+.editDept__container > img:hover {
+    transform: scale(1.1);
+}
+
+.editDept__container h4 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.editDept__container textarea {
+    resize: none;
+    width: 94%;
+    padding: 10px;
+    font-family: var(--ff-main);
+    font-size: .875rem;
+}
+
+.editDept__container > button {
+    width: 100%;
+    font-family: var(--ff-main);
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    padding-block: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.editDept__container > button:hover {
+    background-color: var(--lightpurple);
+
+}
+
+/* !MODAL to DELTE the department */
+#deleteDeptModal__controller {
+    border: none;
+    min-height: max-content;
+    height: max-content;
+    width: 60%;
+    border-radius: 8px;
+
+    padding-block: 2rem;
+    padding-inline: 1.3rem;
+    font-family: 'Inter', sans-serif 
+}
+
+.deleteDept__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    gap: 13px;
+}
+
+.deleteDept__container > img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+}
+
+.deleteDept__container > img:hover {
+    transform: scale(1.1);
+}
+
+.deleteDept__container p {
+    font-size: 1.75rem;
+    font-weight: bold;
+    align-self: flex-start;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.deleteDept__container > button {
+    width: 60%;
+    border: none;
+    background-color: var(--green);
+    padding-block: 12px;
+    color: white;
+    font-family: var(--ff-main);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.deleteDept__container > button:hover {
+    background-color: #2a7917;
+}
